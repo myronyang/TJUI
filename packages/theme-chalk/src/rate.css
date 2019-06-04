@@ -1,0 +1,15 @@
+@import "./common/variable.css";
+
+@component-namespace tj {
+  @b rate {
+    display: inline-block;
+    font-size: 0;
+
+    .tj-icon {
+      display: inline-block;
+      font-size: 20px;
+      color: var(--color-default);
+      margin-right: 2px;
+    }
+  }
+}

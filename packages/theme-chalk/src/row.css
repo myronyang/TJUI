@@ -1,0 +1,21 @@
+@import "./common/variable.css";
+
+@component-namespace tj {
+  @b row {
+    width: 100%;
+    overflow: hidden;
+
+    @e inner {
+      &:before {
+        content: '';
+        display: table;
+      }
+
+      &::after {
+        content ''
+        display: table;
+        clear: both;
+      }
+    }
+  }
+}
