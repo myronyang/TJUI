@@ -119,10 +119,29 @@ export default {
 
   .javascript {
     color: #eee;
-  }
 
-  .hljs-keyword, .hljs-literal {
-    color: #f08d49;
+    .hljs-function {
+      color: #f08d49;
+    }
+
+    .hljs-params {
+      color: #67cdcc;
+    }
+
+    .hljs-number {
+      color: #f08d49;
+    }
+
+    .hljs-keyword {
+      color: #cfa3ec;
+    }
+
+    .hljs-string {
+      color: #7ec699;
+    }
+
+    .hljs-literal {
+    }
   }
 }
 

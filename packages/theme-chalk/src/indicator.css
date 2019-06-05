@@ -1,0 +1,49 @@
+@import "./common/variable.css";
+
+@component-namespace tj {
+
+  @b indicator {
+    transition: opacity 0.2s linear;
+
+    @e wrapper {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      border-radius: 5px;
+      background: rgba(0, 0, 0, 0.7);
+      color: white;
+      box-sizing: border-box;
+      text-align: center;
+      z-index: 3000;
+    }
+
+    @e text {
+      display: block;
+      color: #fff;
+      text-align: center;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    @e spin {
+      display: inline-block;
+      text-align: center;
+    }
+
+    @e mask {
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      size: 100%;
+      opacity: 0;
+      background: transparent;
+      z-index: 3000;
+    }
+  }
+
+  .tj-indicator-enter,
+  .tj-indicator-leave-active {
+    opacity: 0;
+  }
+}

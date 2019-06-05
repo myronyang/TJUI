@@ -1,0 +1,48 @@
+@import "./common/variable.css";
+
+@component-namespace tj {
+  @b loading {
+    font-size: 12px;
+    display: inline-block;
+
+    @e spinners {
+      position: relative;
+      display: block;
+      width: 1em;
+      height: 1em;
+    }
+
+    @e spinner {
+      position: absolute;
+      left: 44.5%;
+      top: 37%;
+      width: 2PX;
+      height: 25%;
+      border-radius: calc(50% / 20%);
+      opacity: 0.25;
+      background-color: currentColor;
+      animation: spinner-fade 1s linear infinite;
+
+      @for $i from 1 to 12 {
+        &:nth-child($i) {
+          animation-delay: calc(($i - 1) / 12)s;
+          transform: rotate(calc(30deg * calc($i - 6))) translateY(-150%);
+        }
+      }
+    }
+  }
+}
+
+@keyframes spinner-fade {
+  0% {
+    opacity: 0.85;
+  }
+
+  50% {
+    opacity: 0.25;
+  }
+
+  100% {
+    opacity: 0.25;
+  }
+}

@@ -10,7 +10,7 @@
     label-width="100px" 
     must title="验证码" 
     v-model="code" 
-    icon="tj-weizhi" 
+    icon="tj-dianhua1" 
     placeholder="请输入验证码">
     <tj-button class="mr_10" plain round size="small">获取验证码</tj-button>
   </tj-field>

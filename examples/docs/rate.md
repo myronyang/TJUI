@@ -65,6 +65,7 @@
 | value | 分数 | number | | 1 |
 | disabled | 禁用 | boolean | | |
 | max | 最大评分 | number | | 5 |
+| size | 容器尺寸 | number | | 20 |
 
 ### Events
 | 参数 | 说明 | 参数 |

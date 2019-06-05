@@ -26,12 +26,16 @@
   .title 
     color #fff
     font-size 1.3rem
+    font-weight bolder
   .links
     float right
     overflow hidden
     margin-right 1.875rem /* 30/16 */
     .nav-item
       float left
+      margin-right 35px
+      a 
+        color #fff
     .repo-link
       color #fff
       float left
@@ -40,6 +44,10 @@
   display flex
   margin-top 57px
   .sidebar 
+    position: fixed;
+    width: 300px;
+    height: 100%;
+    z-index 9
     flex 0 0 16.875rem /* 270/16 */
     background #eee
     overflow-y auto
@@ -55,6 +63,7 @@
         margin: 1rem 0 0.5rem
         span 
           font-weight: 600
+          color #3f536e
       .sidebar-group-items
         margin: 0
         padding-left: 1rem
@@ -73,6 +82,7 @@
     flex 1
     padding: 1rem 2rem
     overflow: hidden
+    margin-left 300px
   
   .example
     flex 0 0 22.5rem /* 360/16 */
@@ -118,10 +128,10 @@
   .header
     .sidebar-button
       display inline-block
+    .nav-item
+      margin-right 15px !important
   .container
     .sidebar 
-      z-index 99
-      position: fixed
       width: 15.625rem /* 200/16 */
       left: 0
       top: 3.5625rem /* 57/16 */
@@ -132,6 +142,7 @@
     
     .main
       padding 1rem
+      margin-left 0
       .bg_gray
         position relative
         left -1rem

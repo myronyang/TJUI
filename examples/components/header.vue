@@ -16,7 +16,9 @@
     </div>
     <a class="title">TJUI</a>
     <div class="links">
-      <div class="nav-item"></div>
+      <div class="nav-item">
+        <a href="https://myronyang.github.io/blog/">记录集</a>
+      </div>
       <a class="repo-link" href="https://github.com/myronyang/TJUI">
         GitHub
         <svg
