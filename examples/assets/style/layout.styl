@@ -46,7 +46,7 @@
   .sidebar 
     position: fixed;
     width: 300px;
-    height: 100%;
+    height: calc(100% - 58px);
     z-index 9
     flex 0 0 16.875rem /* 270/16 */
     background #eee
@@ -135,7 +135,7 @@
       width: 15.625rem /* 200/16 */
       left: 0
       top: 3.5625rem /* 57/16 */
-      height: 100%
+      height: calc(100% - 58px);
       transform translate3d(-100%, 0, 0)
       &.open
         transform translate3d(0, 0, 0)

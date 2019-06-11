@@ -1,11 +1,12 @@
 ## Button 按钮
 
 ### 按钮类型
-支持default、primary、danger三种类型，默认为default。
+支持default、primary、danger、success三种类型，默认为default。
 
 <div class="demo-block">
   <tj-button class="mr_5">default</tj-button>
   <tj-button type="danger" class="mr_5">danger</tj-button>
+  <tj-button type="success" class="mr_5">success</tj-button>
   <tj-button type="primary" class="mr_5">primary</tj-button>
 <div>
 
@@ -13,21 +14,24 @@
 ```html
 <tj-button>default</tj-button>
 <tj-button type="danger" plain>danger</tj-button>
+<tj-button type="success" class="mr_5">success</tj-button>
 <tj-button type="primary" plain>primary</tj-button>
 ```
 :::
 
 ### 朴素按钮
 <div class="demo-block">
-  <tj-button>default</tj-button>
-  <tj-button type="danger" plain>danger</tj-button>
-  <tj-button type="primary" plain>primary</tj-button>
+  <tj-button plain>default</tj-button>
+  <tj-button class="ml_5" type="danger" plain>danger</tj-button>
+  <tj-button class="ml_5" type="success" plain>success</tj-button>
+  <tj-button class="ml_5" type="primary" plain>primary</tj-button>
 <div>
 
 ::: demo
 ```html
 <tj-button>default</tj-button>
 <tj-button type="danger" plain>danger</tj-button>
+<tj-button type="success" plain>success</tj-button>
 <tj-button type="primary" plain>primary</tj-button>
 ```
 :::
@@ -65,13 +69,15 @@
 ### 禁用圆角
 <div class="demo-block">
   <tj-button class="mr_10" disabled round>default</tj-button>
-  <tj-button type="danger" disabled round="5px">danger</tj-button>
+  <tj-button class="mr_10" type="danger" disabled round="5px">danger</tj-button>
+  <tj-button type="success" disabled round="5px" plain>success</tj-button>
 <div>
 
 ::: demo
 ```html
 <tj-button disabled>default</tj-button>
 <tj-button type="danger" disabled>danger</tj-button>
+<tj-button type="success" disabled round="5px" plain>success</tj-button>
 ```
 :::
 
@@ -80,5 +86,6 @@
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | disabled | 是否禁用 | boolean |  | false |
 | round | 按钮圆角 | boolean, string | 自定义 | 3px |
-| type | 类型 | string | default, primary, danger | default |
+| type | 类型 | string | default, primary, danger, success| default |
 | size | 尺寸 | string | mini, small, normal, middle, large | normal |
+| plain | 是否朴素按钮 | boolean | | false |

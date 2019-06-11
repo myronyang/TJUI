@@ -7,7 +7,7 @@
   <tj-cell class="mt_10" icon="tj-weizhi" title="首付比例">
     <span class="green">总支出的30%</span>
   </tj-cell>
-  <tj-cell class="mt_10" icon="tj-dianhua" title="验证码">
+  <tj-cell class="mt_10" icon="tj-dianhua1" title="验证码">
     <tj-button size="mini" class="green">获取验证码</tj-button>
   </tj-cell>
 </div>
@@ -18,7 +18,7 @@
 <tj-cell class="mt_10" icon="tj-weizhi" title="首付比例">
   <span class="green">总支出的30%</span>
 </tj-cell>
-<tj-cell class="mt_10" icon="tj-dianhua" title="验证码">
+<tj-cell class="mt_10" icon="tj-dianhua1" title="验证码">
   <tj-button size="mini" class="green">获取验证码</tj-button>
 </tj-cell>
 ```

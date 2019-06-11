@@ -1,0 +1,35 @@
+@import "./common/variable.css";
+
+@component-namespace tj {
+  @b checker-item {
+    display: inline-block;
+    border: 1px solid var(--color-light-grey-s);
+
+    @e active {
+      color: var(--color-default);
+      border-color: var(--color-default);
+    }
+
+    @m small {
+      font-size: 12px;
+      padding: 4px 7px;
+    }
+
+    @m normal {
+      padding: 8px 10px;
+    }
+
+    @m large {
+      padding: 13px 20px;
+    }
+  }
+
+  @b checker {
+    width: 100%;
+    overflow: hidden;
+
+    @e inner {
+      font-size: 0;
+    }
+  }
+}

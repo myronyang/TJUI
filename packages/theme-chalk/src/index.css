@@ -11,6 +11,20 @@
 @import "./loading.css";
 @import "./indicator.css";
 @import "./dialog.css";
+@import "./checker.css";
+@import "./collapse.css";
+@import "./progress.css";
+@import "./upload.css";
+@import "./range.css";
+@import "./tabs.css";
+@import "./header.css";
+@import "./price.css";
+@import "./panel.css";
+@import "./popup.css";
+@import "./checkbox.css";
+@import "./select.css";
+@import "./recycleList.css";
+@import "./search.css";
 
 .v-modal {
   position: fixed;

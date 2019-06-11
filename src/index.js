@@ -11,7 +11,22 @@ import Loading from '../packages/loading/index'
 import Toast from '../packages/toast/index'
 import Indicator from '../packages/indicator/index'
 import Dialog from '../packages/dialog/index'
-import DialogVue from '../packages/dialog/src/dialog.vue'
+import Checker from '../packages/checker/index'
+import CheckerItem from '../packages/checker-item/index'
+import Collapse from '../packages/collapse/index'
+import Progress from '../packages/progress/index'
+import Upload from '../packages/upload/index'
+import Range from '../packages/range/index'
+import Tabs from '../packages/tabs/index'
+import TabsItem from '../packages/tabs-item/index'
+import Header from '../packages/header/index'
+import Price from '../packages/price/index'
+import Panel from '../packages/panel/index'
+import Popup from '../packages/popup/index'
+import Checkbox from '../packages/checkbox/index'
+import Select from '../packages/select/index'
+import RecycleList from '../packages/recycle-list/index'
+import Search from '../packages/search/index'
 
 const components = [
   Row,
@@ -24,7 +39,22 @@ const components = [
   Swipe,
   SwipeItem,
   Loading,
-  DialogVue
+  Checker,
+  CheckerItem,
+  Collapse,
+  Progress,
+  Upload,
+  Range,
+  Tabs,
+  TabsItem,
+  Header,
+  Price,
+  Panel,
+  Popup,
+  Checkbox,
+  Select,
+  RecycleList,
+  Search,
 ]
 
 const install = function (Vue) {
@@ -52,5 +82,20 @@ export default {
   Swipe,
   SwipeItem,
   Loading,
-  DialogVue
+  Checker,
+  CheckerItem,
+  Collapse,
+  Progress,
+  Upload,
+  Range,
+  Tabs,
+  TabsItem,
+  Header,
+  Price,
+  Panel,
+  Popup,
+  Checkbox,
+  Select,
+  RecycleList,
+  Search,
 }

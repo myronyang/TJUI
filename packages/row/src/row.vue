@@ -7,6 +7,7 @@ export default {
       type: String,
       default: "div"
     },
+    column: Boolean,
     gutter: Number,
     flex: Boolean,
     to: String
@@ -18,6 +19,11 @@ export default {
 
       if (this.flex) {
         ret.display = "flex";
+      }
+
+      if (this.column) {
+        ret.display = "flex";
+        ret.flexFlow = "column";
       }
 
       if (this.gutter) {

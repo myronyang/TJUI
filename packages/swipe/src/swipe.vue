@@ -15,8 +15,7 @@
 </template>
 
 <script>
-import { once } from "../../../src/utils/dom.js";
-import { addClass, removeClass } from "../../../src/utils/dom.js";
+import { once, addClass, removeClass } from "../../../src/utils/dom.js";
 export default {
   name: "tj-swipe",
   created() {

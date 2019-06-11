@@ -3,6 +3,7 @@
     class="tj-button"
     :class="['tj-button--' + size, 'tj-button--' + type, {
       'is-plain': plain,
+      'is-disabled': disabled,
     }]"
     :style="{borderRadius:roundSty}"
     :disabled="disabled"
@@ -31,7 +32,7 @@ export default {
       type: String,
       default: "default",
       validator(value) {
-        return ["default", "danger", "primary"].indexOf(value) > -1;
+        return ["default", "danger", "primary", "success"].indexOf(value) > -1;
       }
     },
     size: {

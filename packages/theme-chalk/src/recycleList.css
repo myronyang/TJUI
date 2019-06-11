@@ -1,0 +1,51 @@
+@import "./common/variable.css";
+
+@component-namespace tj {
+  @b recycle-list {
+    position: relative;
+    height: 100%;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+
+    @e main {
+      min-height: 100%;
+    }
+
+    @e fake {
+      height: 1px;
+    }
+
+    @e invisible {
+      top: -1000px;
+      visibility: hidden;
+    }
+
+    @e item {
+      width: 100%;
+      position: absolute;
+      box-sizing: border-box;
+    }
+
+    @e transition {
+      position: absolute;
+      opacity: 0;
+      transition-property: opacity;
+      transition-duration: 500ms;
+    }
+
+    @e loading {
+      overflow: hidden;
+    }
+
+    @e loading-content {
+      text-align: center;
+    }
+
+    @e spinner {
+      margin: 10px auto;
+      display: flex;
+      justify-content: center;
+    }
+  }
+}

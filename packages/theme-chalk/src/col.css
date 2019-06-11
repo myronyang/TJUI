@@ -2,12 +2,16 @@
 
 @component-namespace tj {
   @b col {
-    &.is-vertical:after {
+    /* &.is-vertical:after {
       content: '';
       width: 0;
       height: 100%;
       display: inline-block;
       vertical-align: middle;
+    } */
+    &.is-vertical {
+      display: flex;
+      align-items: center;
     }
     &.tj-col-1,
     &.tj-col-2,

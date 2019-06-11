@@ -1,0 +1,22 @@
+@import "./common/variable.css";
+
+@component-namespace tj {
+  @b checkbox {
+    display: inline-block;
+
+    &.is-disabled {
+      opacity: .7;
+    }
+ 
+    &.is-active,
+    &.is-active .tj-icon {
+      color: var(--color-default);
+    }
+
+    .tj-icon {
+      margin-right: 2px;
+      color: var(--color-light-grey-s);
+    }
+  }
+
+}

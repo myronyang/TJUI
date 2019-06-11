@@ -1,0 +1,93 @@
+@import "./common/variable.css";
+
+@component-namespace tj {
+  @b range {
+    * {
+      display: -ms-flexbox;
+      display: flex;
+      display: -webkit-box;
+    }
+
+    *[slot=start] {
+      margin-right: 5px;
+    }
+
+    *[slot=end] {
+      margin-left: 5px;
+    }
+
+    @e inner {
+      position: relative;
+      display: flex;
+      height: 30px;
+      line-height: 30px;
+    }
+
+    @e content {
+      position: relative;
+      flex: 1;
+      margin-right: 30px;
+    }
+
+    @e runway {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      left: 0;
+      right: -30px;
+      border-top-color: var(--color-light-grey-ss);
+      border-top-style: solid;
+      border-radius: 25px;
+    }
+
+    @e thumb {
+      background-color: var(--color-white);
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 30px;
+      height: 30px;
+      border-radius: 100%;
+      cursor: move;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+    }
+
+    @e progress {
+      position: absolute;
+      display: block;
+      background-color: var(--color-default);
+      top: 50%;
+      transform: translateY(-50%);
+      width: 0;
+      border-radius: 25px 0 0 25px;
+    }
+
+    @m disabled {
+      opacity: 0.5;
+    }
+
+    /* @e list {
+      display: flex;
+      width: 100%;
+
+      .tj-range__step {
+        flex: 1;
+
+        &:last-child {
+          flex: 0 0 30px;
+        }
+
+        &.tj-range--active {
+          color: var(--color-default);
+        }
+      }
+
+      .tj-range__txt {
+        display: inline-block;
+        width: 30px;
+        text-align: center;
+      }
+    } */
+  }
+}
+

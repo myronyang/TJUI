@@ -1,0 +1,43 @@
+@import "./common/variable.css";
+
+@component-namespace tj {
+  @b tabs {
+    background: var(--color-white);
+
+    @e header {
+      font-size: 16px;
+      overflow-x: auto;
+      border-bottom: 1px solid var(--color-light-grey-ss);
+    }
+
+    @e item {
+      text-align: center;
+      line-height: 49px;
+
+      &.active {
+        .tj-tabs__label {
+          display: inline-block;
+          line-height: 47px;
+          color: var(--color-default);
+          font-weight: bolder;
+          border-bottom: 2px solid var(--color-default);
+        }
+      }
+    }
+
+    @e more {
+      overflow-x: auto;
+
+      .tj-tabs__item {
+        flex: inherit !important;
+        margin: 0 25px;
+      }
+    }
+
+  }
+
+  @b tabs-item {
+    padding: 15px;
+  }
+
+}

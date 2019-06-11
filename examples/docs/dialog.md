@@ -6,6 +6,9 @@
   <tj-button round="3px" class="ml_10" @click="handle2">confirm</tj-button>
   <tj-button round="3px" class="ml_10" @click="handle3">prompt</tj-button>
 
+  <style>
+  .tj-dialog {width: 370px}
+  </style>
   <script>
     export default {
       methods: {
@@ -114,3 +117,10 @@
 | ----- | ----- | ----- | -----  | ----- |
 | title | 标题 | string | | |
 | message | 文本内容 | string | | |
+| showConfirmButton | 是否显示确认按钮 | boolean | | true |
+| showCancelButton | 是否显示取消按钮 | boolean | | true |
+| confirmButtonText | 确认按钮文字 | string | | |
+| cancelButtonText | 取消按钮文字 | string | | |
+| showInput | 是否显示一个输入框 | boolean | | false |
+| inputType | 输入框的类型 | string | | text |
+| inputValue | 输入框的值	 | string | | |

@@ -2,12 +2,12 @@
 
 @component-namespace tj {
   @b loading {
-    font-size: 12px;
     display: inline-block;
+    font-size: 0;
 
     @e spinners {
       position: relative;
-      display: block;
+      display: inline-block;
       width: 1em;
       height: 1em;
     }
@@ -30,6 +30,27 @@
         }
       }
     }
+    
+
+    @e circular {
+      display: inline-block;
+      animation: tj-rotate 0.8s linear infinite;
+      animation-duration: 2s;
+
+      circle {
+        animation: circular-fade 1.5s ease-in-out infinite;
+        stroke: currentColor;
+        stroke-width: 3;
+        stroke-linecap: round;
+      }
+    }
+
+    @e text {
+      display: inline-block;
+      vertical-align: top;
+      margin-left: 5px;
+      font-size: 14px;
+    }
   }
 }
 
@@ -44,5 +65,31 @@
 
   100% {
     opacity: 0.25;
+  }
+}
+
+@keyframes circular-fade {
+  0% {
+    stroke-dasharray: 1, 200;
+    stroke-dashoffset: 0;
+  }
+
+  50% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -40;
+  }
+
+  100% {
+    stroke-dasharray: 90, 150;
+    stroke-dashoffset: -120;
+  }
+}
+
+@keyframes tj-rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
   }
 }

@@ -1,0 +1,47 @@
+@import "./common/variable.css";
+
+@component-namespace tj {
+  @b collapse {
+    padding: 15px;
+    background: var(--color-white);
+    overflow: hidden;
+
+    @e head {
+      display: flex;
+    }
+
+    @e title {
+      flex: 1;
+      font-size: 14px;
+    }
+
+    @e btn {
+      flex: 0 0 100px;
+      color: var(--color-light-grey);
+      text-align: right;
+
+      .tj-icon {
+        font-size: 12px;
+      }
+    }
+
+    @e txt {
+      color: var(--color-default);
+    }
+
+    @e main {
+      margin-top: 15px;
+
+      &.move-enter-active,
+      &.move-leave-active {
+        transition: all 0.2s linear;
+        transform: translate3d(0, 0, 0);
+      }
+
+      &.move-enter,
+      &.move-leave-active {
+        transform: translate3d(0, 100%, 0);
+      }
+    }
+  }
+}

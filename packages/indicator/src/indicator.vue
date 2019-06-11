@@ -1,8 +1,8 @@
 <template>
   <transition name="tj-indicator">
     <div class="tj-indicator" v-show="visible">
-      <div class="tj-indicator__wrapper" :style="{ 'padding': text ? '20px' : '15px' }">
-        <tj-loading :size="24"></tj-loading>
+      <div class="tj-indicator__wrapper">
+        <tj-loading :size="28" :type="iconType"></tj-loading>
         <span class="tj-indicator__text" v-show="text">{{ text }}</span>
       </div>
       <div class="tj-indicator__mask" @touchmove.stop.prevent></div>
@@ -18,6 +18,10 @@ export default {
     spinnerType: {
       type: String,
       default: "snake"
+    },
+    iconType: {
+      type: String,
+      default: "spinner"
     }
   },
   data() {

@@ -12,6 +12,7 @@ export default {
     }
     if (instance.visible) return
     instance.text = typeof options === 'string' ? options : options.text || ''
+    instance.iconType = options.iconType || 'spinner'
     instance.spinnerType = options.spinnerType || 'snake'
     document.body.appendChild(instance.$el)
 

@@ -2,7 +2,7 @@
   /* color vars */
   /* basic */
   --color-default: #9c27b0;
-  --color-green: #00c9a7;
+  --color-green: #07c160;
   --color-regular-blue: #4a4c5b;
   --color-background: #f7f7f7; 
   --color-white: #fff; 
@@ -28,9 +28,12 @@
   
   /* blue */
   --color-blue: #444654;
+
+  /* yellow */
+  --color-yellow: #e6a23c;
   
   /* red */
-  --color-red: #fa5f2e; 
+  --color-red: #f44; 
 
   /* row line */
   --color-row-line: #ebebeb; 
