@@ -5,6 +5,7 @@ Vue.use(Router)
 
 // 开发指南
 const introduction = r => require.ensure([], () => r(require('../docs/introduction.md')), 'introduction')
+const quickstart = r => require.ensure([], () => r(require('../docs/quickstart.md')), 'quickstart')
 
 // 基础组件
 const layout = r => require.ensure([], () => r(require('../docs/layout.md')), 'layout')
@@ -49,6 +50,12 @@ export default new Router({
       label: '开发指南',
       name: '介绍',
       component: introduction
+    },
+    {
+      path: '/quickstart',
+      label: '开发指南',
+      name: '快速上手',
+      component: quickstart
     },
     // 基础组件
     {

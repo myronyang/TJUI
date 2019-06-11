@@ -1,6 +1,6 @@
 {
-  "name": "taoui",
-  "version": "1.0.0",
+  "name": "taojinui",
+  "version": "1.1.3",
   "description": "This is a UI components for Vue 2.x",
   "author": "myronyang <821253835@qq.com>",
   "private": false,
@@ -12,7 +12,8 @@
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
     "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "build": "node build/build.js"
+    "build": "node build/build.js",
+    "deploy": "bash deploy.sh"
   },
   "dependencies": {
     "vue": "^2.5.2",

@@ -44,8 +44,6 @@ export default {
   },
   methods: {
     handleClick() {
-      console.log(999);
-      
       const $ele = document.querySelector("#sidebar");
       $ele.classList.remove("open");
     }

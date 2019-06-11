@@ -49,18 +49,22 @@
 export default {
   methods: {
     handleToggle() {
-      const $ele = document.querySelector("#sidebar");
-      const className = $ele.getAttribute('class');
+      const $ele = document.querySelector("#sidebar"),
+            $main = document.querySelector(".main"),
+            className = $ele.getAttribute('class'),
+            closeSidebar = function() {
+              $ele.classList.remove("open");
+            }
       
       if (className === "sidebar") {
         $ele.classList.add("open");
+        $main.addEventListener("click", closeSidebar, false);
       } else {
         $ele.classList.remove("open");
+        $main.removeEventListener("click", closeSidebar, false)
       }
     }
   }
 };
 </script>
 
-<style>
-</style>
