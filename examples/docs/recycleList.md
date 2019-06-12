@@ -63,6 +63,59 @@ export default {
 </script>
 </div>
 
+::: demo
+```html
+<tj-recycle-list class="list" :size="size" :on-fetch="onFetch" :offset="offset">
+  <template slot="item" slot-scope="{ data }">
+    <tj-row flex class="mt_15" :gutter="15" @click="handleClick(data)">
+      <tj-col width="48px">
+        <img width="100%" :src="data.avatar">
+      </tj-col>
+      <tj-col class="bubble">
+        <p>{{ data.msg }}</p>
+        <div class="meta">
+          <time class="posted-date">{{ data.time }}</time>
+        </div>
+      </tj-col>
+    </tj-row>
+  </template>
+</tj-recycle-list>
+
+<script>
+export default {
+  data() {
+    return {
+      size: 50,
+      offset: 100
+    }
+  },
+  methods: {
+    onFetch() {
+      let items = []
+      return new Promise((resolve) => {
+        // 模拟请求 50 条数据，因为 size 设置为 50
+        setTimeout(() => {
+          for (let i = 0; i < 50; i++) {
+            items.push({
+              id: i,
+              avatar: 'https://s3.amazonaws.com/uifaces/faces/twitter/danpliego/128.jpg',
+              msg: 'name' + i,
+              time: 'Thu Oct 25 2018 15:02:12 GMT+0800 (中国标准时间)'
+            })
+          }
+          resolve(items)
+        }, 1000)
+      })
+    },
+    handleClick(data) {
+      console.log('Item:' + data)
+    }
+  }
+}
+</script>
+```
+:::
+
 ### Props
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |

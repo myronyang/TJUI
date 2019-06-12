@@ -1,10 +1,10 @@
 <template>
   <div class="tj-collapse">
-    <div class="tj-collapse__head">
+    <div class="tj-collapse__head" @click="handleClick">
       <div class="tj-collapse__title">
         <span>{{title}}</span>
       </div>
-      <div class="tj-collapse__btn" @click="handleClick">
+      <div class="tj-collapse__btn">
         <i class="tj-icon" :class="visible? 'tj-top' : 'tj-bottom'"></i>
       </div>
     </div>

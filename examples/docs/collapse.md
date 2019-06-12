@@ -1,4 +1,4 @@
-## Collapse 
+## Collapse 折叠面板
 
 ### 基础用法
 <div class="demo-block bg_gray mt_15">

@@ -22,12 +22,12 @@ Vue.use(TJUI)
 
 ```
 import {
-  tj-button,
-  tj-loading
+  Button,
+  Loading
 } from 'taojinui'
 
-Vue.use(tj-button)
-Vue.use(tj-loading)
+Vue.use(Button)
+Vue.use(Loading)
 
 import 'taojinui/packages/theme-chalk/lib/button.css'
 import 'taojinui/packages/theme-chalk/lib/loading.css'

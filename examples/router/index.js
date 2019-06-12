@@ -98,7 +98,7 @@ export default new Router({
     {
       path: '/switch',
       label: '表单组件',
-      name: 'Switch 输入框',
+      name: 'Switch 开关',
       component: Switch
     }, 
     {

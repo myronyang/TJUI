@@ -58,16 +58,46 @@ const components = [
 ]
 
 const install = function (Vue) {
-  if (install.installed) return;
-  components.map(component => Vue.component(component.name, component));
+  if (install.installed) return
+  components.map(component => Vue.component(component.name, component))
 
-  Vue.$toast = Vue.prototype.$toast = Toast;
-  Vue.$indicator = Vue.prototype.$indicator = Indicator;
-  Vue.$dialog = Vue.prototype.$dialog = Dialog;
+  Vue.$toast = Vue.prototype.$toast = Toast
+  Vue.$indicator = Vue.prototype.$indicator = Indicator
+  Vue.$dialog = Vue.prototype.$dialog = Dialog
 }
 
 if (typeof window !== 'undefined' && window.Vue) {
-  install(window.Vue);
+  install(window.Vue)
+}
+
+export {
+  install,
+  Row,
+  Col,
+  Button,
+  Cell,
+  Field,
+  Switch,
+  Rate,
+  Swipe,
+  SwipeItem,
+  Loading,
+  Checker,
+  CheckerItem,
+  Collapse,
+  Progress,
+  Upload,
+  Range,
+  Tabs,
+  TabsItem,
+  Header,
+  Price,
+  Panel,
+  Popup,
+  Checkbox,
+  Select,
+  RecycleList,
+  Search,
 }
 
 export default {

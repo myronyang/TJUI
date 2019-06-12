@@ -1,6 +1,7 @@
-## 介绍
-
-**TJUI是基于 Vue.js 实现的移动端通用组件库**
+<div class="demo-block text_c">
+  <img src="../assets/image/logo.png" width="300">
+  <p style="margin-bottom: 30px; color: #9c27b0">TJUI是基于 Vue.js 实现的移动端通用组件库<p>
+</div>
 
 ### 特性
 

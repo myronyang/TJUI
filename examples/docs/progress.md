@@ -1,4 +1,4 @@
-## progress 进度条
+## Progress 进度条
 
 ### 基础用法
 支持success、warninge、exception三种样式，默认为基本样式。

@@ -2,7 +2,7 @@
   <div class="tj-rate">
     <span
       class="tj-icon"
-      :style="{fontSize: size + 'px'}"
+      :style="{fontSize: size + 'px', color: color}"
       :class="classNames[index]"
       v-for="(item, index) in max"
       @click="handleClick(item, index)"
@@ -27,7 +27,8 @@ export default {
     size: {
       type: Number,
       default: 20
-    }
+    },
+    color: String
   },
   data() {
     return {

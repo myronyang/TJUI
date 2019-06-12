@@ -48,6 +48,7 @@
 | ----- | ----- | ----- | -----  | ----- |
 | value | 绑定值 | Boolean | | |
 | disabled | 禁用 | Boolean | | |
+| color | 颜色 | string | | |
 
 ### Events
 | 参数 | 说明 | 参数 |

@@ -62,10 +62,11 @@
 ### Props
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
-| value | 分数 | number | | 1 |
+| v-model | 分数 | number | | 1 |
 | disabled | 禁用 | boolean | | |
 | max | 最大评分 | number | | 5 |
 | size | 容器尺寸 | number | | 20 |
+| color | 颜色 | string | | |
 
 ### Events
 | 参数 | 说明 | 参数 |
