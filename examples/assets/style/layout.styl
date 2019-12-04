@@ -7,7 +7,7 @@
   background: #9c27b0
   height 58px
   line-height 58px
-  padding 0 .9375rem /* 15/16 */
+  padding 0 1.2rem /* 15/16 */
   z-index 999
   
   .sidebar-button
@@ -36,6 +36,7 @@
       margin-right 35px
       a 
         color #fff
+        
     .repo-link
       color #fff
       float left
@@ -51,6 +52,8 @@
     flex 0 0 16.875rem /* 270/16 */
     background #eee
     overflow-y auto
+    &::-webkit-scrollbar 
+      display none
     .sidebar-links
       padding 1.5rem 0
       margin 0
@@ -63,7 +66,7 @@
         margin: 1rem 0 0.5rem
         span 
           font-weight: 600
-          color #3f536e
+          color #000
       .sidebar-group-items
         margin: 0
         padding-left: 1rem
@@ -85,13 +88,14 @@
     margin-left 300px
   
   .example
-    flex 0 0 22.5rem /* 360/16 */
+    flex 0 0 22.625rem /* 360/16 */
     margin-top 1.875rem /* 30/16 */
+    margin-right 30px
     .example-wrap
-      width 20.625rem /* 330/16 */
-      height 40.625rem /* 650/16 */
+      width 22.625rem 
+      height 44.625rem /* 650/16 */
       background url('https://baojunev-mall.oss-cn-shenzhen.aliyuncs.com/20190530112032-c5a64769713841fb8697d16f18a7d94b.png') no-repeat
-      background-size 20.625rem /* 330/16 */ auto
+      background-size 22.625rem /* 330/16 */ auto
       position relative
       .inner
         position: absolute
