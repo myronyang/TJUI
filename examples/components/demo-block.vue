@@ -1,26 +1,47 @@
 <template>
   <div class="docs-demo-wrapper">
     <div v-show="isExpand" class="demo-container">
-      <div span="14">
-        <div class="docs-demo docs-demo--expand">
-          <div class="highlight-wrapper">
-            <slot name="highlight"></slot>
-          </div>
+      <div class="docs-demo docs-demo--expand">
+        <a
+          class="copy-code"
+          href="javascript:;"
+          @click="handleCopyCode"
+          :data-clipboard-text="copyText"
+        >复制代码</a>
+        <div class="highlight-wrapper" ref="code">
+          <slot name="highlight"></slot>
         </div>
       </div>
     </div>
-    <span class="docs-trans docs-demo__triangle" @click="toggle">{{isExpand ? '隐藏代码' : '显示代码'}}</span>
+    <!-- <span class="docs-trans docs-demo__triangle" @click="toggle">{{isExpand ? '隐藏代码' : '显示代码'}}</span> -->
   </div>
 </template>
 
 <script>
+import Clipboard from "clipboard";
+import TJUI from "../../src/index";
 export default {
   data() {
     return {
-      isExpand: false
+      copyText: "",
+      isExpand: true
     };
   },
   methods: {
+    handleCopyCode(e) {
+      this.copyText = this.$slots.highlight[0].elm.innerText;
+      const clipboard = new Clipboard(".copy-code");
+
+      clipboard.on("success", e => {
+        this.$toast("复制成功");
+        clipboard.destroy();
+      });
+      clipboard.on("error", e => {
+        this.$toast("复制失败");
+        clipboard.destroy();
+      });
+    },
+
     toggle() {
       this.isExpand = !this.isExpand;
     }
@@ -28,30 +49,30 @@ export default {
 };
 </script>
 
-<style lang="stylus">
+<style lang="scss">
 .demo-block {
-  margin-top: 15px;
-  max-width: 720px;
-}
-
-.docs-demo-wrapper {
-  max-width: 720px;
-}
-
-.demo-container {
-  transition: max-height 0.3s ease;
-  overflow: hidden;
+  margin-top: 0.9375rem;
 }
 
 .docs-demo {
+  position: relative;
   width: 100%;
   height: auto;
   box-sizing: border-box;
   font-size: 0.875rem; /* 14/16 */
-  background-color: #282c34;
+  background-color: #fff;
   border-top: none;
-  margin-top: 15px;
-  border-radius: 5px;
+  margin-top: 0.9375rem;
+  border-radius: 10px;
+  box-shadow: 0 8px 12px #ebedf0;
+
+  .copy-code {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #333;
+    font-size: 12px;
+  }
 
   pre code {
     font-family: Consolas, Menlo, Courier, monospace;
@@ -69,7 +90,9 @@ export default {
   padding: 0.625rem /* 10/16 */ 0;
 }
 
-.docs-demo__code, .highlight-wrapper, .docs-demo__meta {
+.docs-demo__code,
+.highlight-wrapper,
+.docs-demo__meta {
   overflow-y: auto;
 }
 
@@ -88,12 +111,13 @@ export default {
 .highlight-wrapper {
   display: none;
 
-  p, pre {
+  p,
+  pre {
     margin: 0;
   }
 
   .language-html {
-    color: #eee;
+    color: #333;
   }
 
   .hljs {
@@ -101,24 +125,35 @@ export default {
   }
 
   .hljs-tag {
-    color: #cc99cd;
+    color: #000;
+    padding: 0 2px;
   }
 
   .hljs-attr {
-    color: #cfa3ec;
+    color: #333;
     margin-left: 5px;
   }
 
   .hljs-name {
-    color: #e2777a;
+    color: #9c27b0;
   }
 
   .hljs-string {
-    color: #eee;
+    color: #5758bb;
   }
 
   .javascript {
-    color: #eee;
+    color: #333;
+
+    .hljs-attr {
+      color: #000;
+      margin-right: 3px;
+    }
+
+    .hljs-literal {
+      color: #5758bb;
+      padding: 0 2px;
+    }
 
     .hljs-function {
       color: #f08d49;
@@ -126,21 +161,22 @@ export default {
 
     .hljs-params {
       color: #67cdcc;
+      padding: 0 2px;
     }
 
     .hljs-number {
       color: #f08d49;
+      padding: 0 2px;
     }
 
     .hljs-keyword {
-      color: #cfa3ec;
+      color: #9c27b0;
+      padding: 2px;
     }
 
     .hljs-string {
-      color: #7ec699;
-    }
-
-    .hljs-literal {
+      color: #5758bb;
+      padding: 0 2px;
     }
   }
 }

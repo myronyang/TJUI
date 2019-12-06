@@ -1,7 +1,7 @@
 <template>
-  <section class="example">
-    <div class="example-wrap">
-      <div class="inner">
+  <section class="example-wrap">
+    <div class="example-box">
+      <div class="example-inner">
         <iframe :src="path" frameborder="0" class="iframe"></iframe>
       </div>
     </div>
@@ -9,7 +9,7 @@
 </template>
 
 <script>
-import router from "../../examples/router";
+import router from "@/router";
 const URL = "https://myronyang.github.io/tjui-example/#";
 export default {
   data() {
@@ -19,10 +19,12 @@ export default {
   },
   mounted() {
     router.beforeEach((to, from, next) => {
-      let catalog = to.path;
-      router.options.routes.forEach(route => {
-        if (to.path === route.path && route.label === "开发指南") {
-          catalog = "/"
+      let catalog = to.path.replace("/docs", "");
+
+      const routes = router.options.routes[1].children;
+      routes.forEach(route => {
+        if (to.path.search(route.path) > -1 && route.label === "开发指南") {
+          catalog = "/";
         }
       });
       this.path = URL + catalog;

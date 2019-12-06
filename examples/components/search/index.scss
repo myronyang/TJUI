@@ -1,0 +1,290 @@
+$seach-content-h: 70px;
+
+.animated {
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both
+}
+
+.search-wrap {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #f5f5f5;
+  z-index: 998;
+
+  .tj-logo {
+    width: 350px;
+    margin: 15px 0 0 15px;
+  }
+
+  .tj-guanbi {
+    position: absolute;
+    top: 3%;
+    right: 3%;
+    z-index: 998;
+    font-size: 1.5rem;
+    cursor: pointer;
+    font-weight: bolder;
+
+    &:hover {
+      display: inline-block;
+      opacity: 0.6;
+    }
+  }
+
+  .search-container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    padding: 20px;
+    width: 50%;
+    height: 570px;
+    margin-left: -25%;
+    margin-top: -305px;
+
+    // transform: translate(-50%, -50%);
+    .search-top-list {
+      border-left: 1px solid #bbbaba;
+      padding-left: 20px;
+      margin: 10px 0 10px 70px;
+      height: 510px;
+      overflow: hidden;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 30px;
+        left: 89px;
+        height: calc(100% - 60px);
+        width: calc(100% - 110px);
+        z-index: 3;
+        background-image: linear-gradient(to bottom,
+            rgb(245, 245, 245),
+            rgba(245, 245, 245, 0.85),
+            rgba(245, 245, 245, 0.7),
+            rgba(245, 245, 245, 0),
+            rgba(245, 245, 245, 0),
+            rgba(245, 245, 245, 0),
+            rgba(245, 245, 245, 0.7),
+            rgba(245, 245, 245, 0.85),
+            rgb(245, 245, 245));
+        pointer-events: none;
+      }
+
+      ul {
+        padding: 10px 0 10px 35px;
+        margin-left: 88px;
+
+        li {
+          height: 70px;
+          line-height: 70px;
+
+          span {
+            font-size: 20px;
+
+            &:hover {
+              color: #9c27b0;
+            }
+          }
+        }
+      }
+    }
+
+    .search-content {
+      position: absolute;
+      top: 50%;
+      left: 40px;
+      width: calc(100% - 90px);
+      height: $seach-content-h;
+      z-index: 9;
+      border: 1px solid #000;
+      border-radius: $seach-content-h;
+      background: #fff;
+      transform: translate(0, -50%);
+      display: flex;
+      overflow: hidden;
+
+      .content-left {
+        flex: 0 0 $seach-content-h;
+        line-height: $seach-content-h;
+        text-align: center;
+
+        .tj-icon {
+          font-size: 2.2rem;
+        }
+      }
+
+      .content-right {
+        flex: 1;
+
+        .btn-serch {
+          display: inline-block;
+          width: calc(100% - 20px);
+          height: $seach-content-h;
+          border: none;
+          padding: 0 10px;
+
+          &:focus {
+            outline: none;
+            border: none;
+          }
+
+          &::-webkit-input-placeholder {
+            color: #999;
+            font-size: 20px;
+          }
+        }
+      }
+    }
+
+    .serach-result {
+      display: none;
+      margin-top: 30px;
+      padding: 0 30px;
+
+      .title {
+        color: #000;
+        // margin-bottom: 15px;
+      }
+
+      .result-list {
+        padding: 15px 0;
+        border-bottom: 1px solid #ccc;
+
+        &:last-child {
+          border-bottom: none;
+        }
+      }
+
+      .not-searching {
+        color: #999;
+        text-align: center;
+        margin-top: 30px;
+      }
+
+      .pagination {
+        text-align: center;
+        margin-top: 20px;
+
+        .item {
+          display: inline-block;
+          padding: 0 5px;
+          margin: 0 10px;
+
+          &.active {
+            color: #9c27b0;
+            font-weight: bolder;
+          }
+        }
+      }
+    }
+
+    &.active {
+      height: 510px;
+
+      .search-top-list {
+        display: none;
+      }
+
+      .search-content {
+        top: 0;
+      }
+
+      .serach-result {
+        display: block;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1500px) and (min-width: 1200px) {
+  .search-wrap .search-container {
+    width: 65%;
+    margin-left: -32.5%;
+
+    .search-top-list {
+      ul {
+        margin-left: 0;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1200px) and (min-width: 768px) {
+  .search-wrap .search-container {
+    width: 65%;
+    margin-left: -32.5%;
+
+    .search-top-list {
+      ul {
+        margin-left: 0;
+      }
+    }
+
+    .search-content {
+      height: 60px;
+
+      .content-left {
+        line-height: 60px;
+      }
+
+      .content-right {
+        line-height: 60px;
+
+        .btn-serch {
+          height: 60px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .search-wrap {
+    .tj-logo {
+      width: 235px;
+    }
+
+    .search-container {
+      width: calc(100% - 10px);
+      transform: translate(-50%, 0);
+      margin-left: 0;
+      animation-name: none;
+
+      .search-top-list {
+        ul {
+          margin-left: 0;
+
+          span {
+            font-size: 18px !important;
+          }
+        }
+      }
+
+      .search-content {
+        height: 50px;
+
+        .content-left {
+          line-height: 50px;
+          flex: 0 0 50px;
+
+          .tj-icon {
+            font-size: 1.4rem;
+          }
+        }
+
+        .content-right {
+          line-height: 50px;
+
+          .btn-serch {
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+}

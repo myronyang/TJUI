@@ -14,7 +14,10 @@
         ></path>
       </svg>
     </div>
-    <a class="title">TJUI</a>
+    
+    <a class="title">
+      <tj-logo color="white" />
+    </a>
     <div class="links">
       <div class="nav-item">
         <a href="https://myronyang.github.io/blog/">记录集</a>
@@ -46,6 +49,7 @@
 </template>
 
 <script>
+import Logo from './logo';
 export default {
   methods: {
     handleToggle() {
@@ -64,6 +68,9 @@ export default {
         $main.removeEventListener("click", closeSidebar, false)
       }
     }
+  },
+  components: {
+    'tj-logo': Logo
   }
 };
 </script>
