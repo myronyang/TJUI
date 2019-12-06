@@ -46,7 +46,7 @@ export default new Router({
   routes: [
     // 开发指南
     {
-      path: '/introduction',
+      path: '/',
       label: '开发指南',
       name: '介绍',
       component: introduction

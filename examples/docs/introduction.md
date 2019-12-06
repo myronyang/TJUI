@@ -1,15 +1,15 @@
-<div class="demo-block text_c">
+<div class="demo-block text_c" style="margin-top: 50px;">
   <img src="../assets/image/logo.png" width="300">
-  <p style="margin-bottom: 30px; color: #9c27b0">TJUI是基于 Vue.js 实现的移动端通用组件库<p>
+  <p style="margin-bottom: 50px;">TJUI是基于 Vue.js 实现的移动端通用组件库<p>
 </div>
 
 ### 特性
 
+- 完善的中文文档
+
 - 支持按需引入
 
 - 支持主题定制
-
-- 完善的中文文档
 
 ### 简述
 
@@ -22,8 +22,8 @@
 Github仓库地址 [TJUI](https://github.com/myronyang/TJUI)
 
 ### 手机在线预览
-<div class="demo-block">
+<div class="demo-block text_c pt_15 pb_10 bg_gray">
   <img src="../assets/image/qrcode.png" width="150">
+  <p class="mt_15">手机浏览器或微信扫一扫</p>
 </div>
 
-手机浏览器或微信扫一扫。
