@@ -85,6 +85,8 @@ Toast 组件会自动在 Vue 的 prototype 上挂载 $toast 方法，便于在�
 :::
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | message | 文本内容 | string | | |
@@ -92,3 +94,5 @@ Toast 组件会自动在 Vue 的 prototype 上挂载 $toast 方法，便于在�
 | duration | 持续时间（毫秒），若为 -1 则不会自动关闭 | number | | 3000 |
 | className | 给容器添加的类名 | string | | |
 | iconClass | icon 图标的类名	 | string | | |
+
+</div>

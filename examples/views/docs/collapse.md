@@ -42,13 +42,21 @@ export default {
 :::
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | value | 当前激活的面板 | boolean | | true |
 | title | 标题名称 | string | | |
 
+</div>
+
 ### Events
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 参数 |
 | ----- | ----- | ----- |
 | change | 折叠状态更改的时候触发 | |
+
+</div>
 

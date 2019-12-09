@@ -84,6 +84,8 @@
 :::
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | height | 容器高度 | string | | |
@@ -93,9 +95,15 @@
 | continuous | 是否可以循环播放 | boolean | | true |
 | showIndicators | 是否显示indicators | boolean | | true |
 
+</div>
+
 ### Events
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 参数 |
 | ----- | ----- | ----- |
 | change | 每一页轮播结束后触发 | index: Number |
 | before | 上一页结束后触发 | index: Number |
 | end | 下一页结束后触发 | index: Number |
+
+</div>

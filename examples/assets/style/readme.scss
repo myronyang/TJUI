@@ -104,15 +104,11 @@
   }
 
   table.table {
-    display: block;
+    display: table;
     width: 100%;
-    background-color: #fff;
     border-collapse: collapse;
     overflow: auto;
-    margin-bottom: 50px;
     border-collapse: collapse;
-    display: table;
-    border-radius: 10px;
     box-shadow: 0 8px 12px #ebedf0;
 
     th {

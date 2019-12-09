@@ -117,6 +117,8 @@ export default {
 :::
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | infinite | 是否无限滚动模式 | boolean | | false |
@@ -124,8 +126,14 @@ export default {
 | offset | 底部拉取更多数据的距离 | number | | 200 |
 | onFetch | 获取更多数据 | function | 必传 | |
 
+</div>
+
 ### Slots
+<div class="demo-block table-wrap">
+
 | 参数      | 说明          |
 |---------- |-------------- |
 | item | 列表某项的作用域插槽，通过此插槽实现想要的渲染视图 |
 | noMore | 无更多数据的提示文案的具名插槽 |
+
+<div>

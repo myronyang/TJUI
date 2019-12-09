@@ -63,7 +63,11 @@ Indicator 采用单例模式，即同一时间只会存在一个 Indicator。
 :::
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | text | 文本内容 | string | | |
 | iconType | 图标类型 | string | spinner, circular | spinner |
+
+</div>

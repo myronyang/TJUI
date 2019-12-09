@@ -82,6 +82,8 @@
 :::
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | disabled | 是否禁用 | boolean |  | false |
@@ -89,3 +91,5 @@
 | type | 类型 | string | default, primary, danger, success| default |
 | size | 尺寸 | string | mini, small, normal, middle, large | normal |
 | plain | 是否朴素按钮 | boolean | | false |
+
+</div>

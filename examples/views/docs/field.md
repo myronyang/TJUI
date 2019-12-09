@@ -65,6 +65,8 @@
 
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | value | 绑定表单输入值 | string | | |
@@ -76,14 +78,24 @@
 | type | 输入框类型 | string | text, number, email, url, password, textarea | text |
 | disabled | 是否禁用 | boolean | | |
 
+</div>
+
 ### Events
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 参数 |
 | ----- | ----- | ----- |
 | change | change事件 | event |
 | blur | blur事件 | event |
 | input | input事件 | event |
 
+</div>
+
 ### Slots
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 |
 | ----- | ----- |
 | value | 显示的 HTML 内容 |
+
+</div>

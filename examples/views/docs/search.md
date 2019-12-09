@@ -52,12 +52,16 @@ export default {
 :::
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | v-model | 搜索结果绑定值 | string | | |
 | cancel-text | 取消按钮文字 | string | | |
 | placeholder | 搜索框占位内容 | string | | 搜索 |
 | autofocus | 自动聚焦 | boolean | | false |
+
+</div>
 
 ### Events
 | 参数 | 说明 | 参数 |

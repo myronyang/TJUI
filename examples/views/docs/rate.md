@@ -60,6 +60,8 @@
 :::
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | v-model | 分数 | number | | 1 |
@@ -68,7 +70,13 @@
 | size | 容器尺寸 | number | | 20 |
 | color | 颜色 | string | | |
 
+</div>
+
 ### Events
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 参数 |
 | ----- | ----- | ----- |
 | change | 点击时触发 | rate: Number |
+
+</div>

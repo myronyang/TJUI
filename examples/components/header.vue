@@ -1,77 +1,82 @@
 <template>
   <header class="header">
-    <div class="sidebar-button" @click="handleToggle">
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        aria-hidden="true"
-        role="img"
-        viewBox="0 0 448 512"
-        class="icon"
-      >
-        <path
-          fill="currentColor"
-          d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"
-        ></path>
-      </svg>
-    </div>
-    
-    <a class="title">
-      <tj-logo color="white" />
-    </a>
-    <div class="links">
-      <div class="nav-item">
-        <a href="https://myronyang.github.io/blog/">记录集</a>
+    <div class="clearfix">
+      <router-link class="fl_left" to="/">
+        <img class="logo" src="../assets/image/logo@2x.png" width="25">
+        <span class="text">TJUI</span>
+      </router-link>
+      <div class="fl_right">
+        <img v-if="!openStatus" src="https://website.didiglobal.com/dist/media/menu.3f7d9019.svg" width="25" @click="handleToggle">
+        <img v-else src="https://website.didiglobal.com/dist/media/close1.027a5639.svg" width="19" @click="handleToggle">
       </div>
-      <a class="repo-link" href="https://github.com/myronyang/TJUI">
-        GitHub
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          aria-hidden="true"
-          x="0px"
-          y="0px"
-          viewBox="0 0 100 100"
-          width="15"
-          height="15"
-          class="icon outbound"
-        >
-          <path
-            fill="currentColor"
-            d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"
-          ></path>
-          <polygon
-            fill="currentColor"
-            points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"
-          ></polygon>
-        </svg>
-      </a>
     </div>
   </header>
 </template>
 
 <script>
-import Logo from './logo';
+import Logo from "./logo";
 export default {
+  data() {
+    return {
+      openStatus: false
+    }
+  },
   methods: {
     handleToggle() {
       const $ele = document.querySelector("#sidebar"),
-            $main = document.querySelector(".main"),
-            className = $ele.getAttribute('class'),
-            closeSidebar = function() {
-              $ele.classList.remove("open");
-            }
-      
-      if (className === "sidebar") {
+        className = $ele.getAttribute("class");
+
+      if (className === "sidebar-wrap") {
         $ele.classList.add("open");
-        $main.addEventListener("click", closeSidebar, false);
+        this.openStatus = true
       } else {
         $ele.classList.remove("open");
-        $main.removeEventListener("click", closeSidebar, false)
+        this.openStatus = false
       }
     }
   },
   components: {
-    'tj-logo': Logo
+    "tj-logo": Logo
   }
 };
 </script>
 
+<style lang="scss" scoped>
+.header {
+  display: none;
+}
+@media screen and (max-width: 745px) {
+.header {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: block;
+  width: 100%;
+  z-index: 98;
+  height: 45px;
+  line-height: 45px;
+  background: #fff;
+  .clearfix {
+    padding: 0 15px;
+  }
+  .fl_left {
+    .logo {
+      position: relative;
+      top: 5px;
+    }
+    .text {
+      color: #000;
+      margin-left: 3px;
+      font-size: 22px;
+      margin-left: -1px;
+    }
+  }
+  .fl_right {
+    img {
+      position: relative;
+      top: 2px;
+    }
+  }
+}
+}
+</style>

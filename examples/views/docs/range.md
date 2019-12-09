@@ -161,6 +161,8 @@
 :::
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | value | 绑定值 | number | | 0 |
@@ -170,9 +172,14 @@
 | step | 步长 | number | | 1 |
 | barHeight | 容器高度 | number | | 2 |
 
+</div>
 
 ### Slots
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 |
 | ----- | ----- |
 | start | 开始文字 |
 | end | 结束文字 |
+
+</div>

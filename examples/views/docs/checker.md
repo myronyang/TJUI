@@ -102,6 +102,8 @@ export default {
 :::
 
 ### Checker Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | value | 选中的label值 | string, number | | |
@@ -111,7 +113,13 @@ export default {
 | type | 选择类型 | string | radio, checkbox | radio |
 | size | 尺寸 | string | small, normal, large | normal |
 
+</div>
+
 ### CheckerItem Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | label | 选选传出值 | number, string, object | | |
+
+</div>

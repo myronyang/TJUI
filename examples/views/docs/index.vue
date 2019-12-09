@@ -1,6 +1,6 @@
 <template>
   <div class="docs-wrapper bg_gray">
-    <!-- <Header></Header> -->
+    <Header></Header>
     <div class="container">
       <Sidebar></Sidebar>
       <section class="main-wrap">

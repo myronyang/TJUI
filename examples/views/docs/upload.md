@@ -151,6 +151,8 @@
 :::
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | width | 容器宽度 | number | | 100 |
@@ -160,3 +162,5 @@
 | on-progress | 图片上传时的钩子 | function(event) | | |
 | on-success | 图片上传成功时的钩子 | function(data) | | |
 | on-error | 图片上传失败时的钩子 | function(orroe) | | |
+
+</div>

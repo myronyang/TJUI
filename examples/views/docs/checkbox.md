@@ -57,9 +57,13 @@ export default {
 
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | value | 显示状态 | boolean | | false |
 | size | 容器尺寸 | number | | 14 |
 | shape | 图标形状 | string |	circle，square | circle |
 | disabled | 是否禁用 | boolean | | false |
+
+</div>

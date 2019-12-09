@@ -63,8 +63,12 @@ export default {
 :::
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | modal | 是否显示遮罩层 | boolean | | false |
 | closeOnClickModal | 是否可以通过点击 modal 层来关闭 popup | boolean | | true |
 | position | popup 的位置 | number | bottom、left、top、right、center | bottom |
+
+</div>

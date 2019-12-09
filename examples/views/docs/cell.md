@@ -26,13 +26,21 @@
 
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数      | 说明          | 类型      | 可选值                           | 默认值  |
 |---------- |-------------- |---------- |--------------------------------  |-------- |
 | icon | 图标iconfont | string | | |
 | title | 标题 | string | | |
 | value | 备注 | string/number | | |
 
+</div>
+
 ### Slots
+<div class="demo-block table-wrap">
+
 | 参数      | 说明          |
 |---------- |-------------- |
 | default | 自定义备注 |
+
+</div>

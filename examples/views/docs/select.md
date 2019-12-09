@@ -199,6 +199,8 @@ select-key 为 v-model 中展示的 key，为空默认整个对象。
 :::
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | title | 标题 | string | | |
@@ -209,9 +211,15 @@ select-key 为 v-model 中展示的 key，为空默认整个对象。
 | selectKey | 选中对象显示对应的key | string | | |
 | itemCount | 显示的列数 | number | | 1 |
 
+</div>
+
 ### Events
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 参数 |
 | ----- | ----- | ----- |
 | confirm | 点击确认触发 | |
 | cancel | 点击取消触发 | |
 | change | 滑动选项时触发 | picker, values |
+
+</div>

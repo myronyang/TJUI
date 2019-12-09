@@ -111,6 +111,8 @@ Panel 组件支持dark、light、plain三种样式，默认为light。
 :::
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | round | 是否显示圆角 | boolean | | false |
@@ -118,3 +120,5 @@ Panel 组件支持dark、light、plain三种样式，默认为light。
 | padding | 容器内间距 | number | | 15 |
 | type | 容器样式 | string | dark、light、plain | light |
 | gutter | 对外间距（margin） | number | | 0 |
+
+</div>

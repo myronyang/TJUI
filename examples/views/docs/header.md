@@ -58,6 +58,8 @@ export default {
 ```
 :::
 
+<div class="demo-block table-wrap">
+
 ### Props
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
@@ -66,3 +68,5 @@ export default {
 | background | 背景颜色 | string | | |
 | fixed | 固定在页面顶部 | boolean | | false |
 | return-back | 返回按钮事件 | function | | |
+
+</div>

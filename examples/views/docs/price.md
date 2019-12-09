@@ -17,7 +17,11 @@ Price 组件默认价格每三位隔开。
 :::
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | size | 容器尺寸 | number | | 16 |
 | decimal | 是否保留两位小数 | boolean | | false |
+
+</div>

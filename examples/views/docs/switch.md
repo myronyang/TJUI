@@ -44,18 +44,30 @@
 :::
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | value | 绑定值 | Boolean | | |
 | disabled | 禁用 | Boolean | | |
 | color | 颜色 | string | | |
 
+</div>
+
 ### Events
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 参数 |
 | ----- | ----- | ----- |
 | change | 切换时触发 | checked: Boolean |
 
+</div>
+
 ### Slots
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 |
 | ----- | ----- |
 | value | 显示的 HTML 内容 |
+
+</div>

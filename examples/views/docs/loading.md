@@ -50,8 +50,12 @@
 
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | size | 容器尺寸 | number | | 24 |
 | color | 颜色 | string | | |
 | type | 图标类型 | string | spinner, circular | spinner |
+
+</div>

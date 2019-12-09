@@ -79,6 +79,8 @@
 :::
 
 ### Props
+<div class="demo-block table-wrap">
+
 | 参数 | 说明 | 类型 | 可选值 | 默认值 |
 | ----- | ----- | ----- | -----  | ----- |
 | percentage | 百分比 | number | 0-100 | 0 |
@@ -88,3 +90,5 @@
 | status | 进度条当前状态 | string | success，exception，warning | |
 | width | 环形进度条画布宽度 | number | | 126 |
 | show-text | 是否显示文字 | boolean | | true |
+
+</div>
