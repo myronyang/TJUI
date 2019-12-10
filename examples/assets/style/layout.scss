@@ -43,7 +43,6 @@
         }
 
         .sidebar-group-items {
-
           .sidebar-link {
             display: block;
             color: #000;
@@ -237,6 +236,7 @@
           .sidebar-head {
             span {
               color: #adadad;
+              font-size: 14px;
             }
           }
 
@@ -253,7 +253,7 @@
         width: 100%;
 
         .main-inner {
-          padding: 30px 15px 10px;
+          padding: 10px 15px;
 
           .docs-demo,
           .table-wrap {

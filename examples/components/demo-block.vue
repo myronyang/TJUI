@@ -177,6 +177,7 @@ export default {
     .hljs-string {
       color: #5758bb;
       padding: 0 2px;
+      margin: 0 2px;
     }
   }
 }
@@ -191,11 +192,10 @@ export default {
 }
 
 .docs-demo__code__mobi__header {
-  border-radius: 0.25rem /* 4/16 */ 0.25rem /* 4/16 */ 0 0;
-  background: -webkit-linear-gradient(rgba(55, 55, 55, 0.98), #545456);
+  border-radius: 4px 4px 0 0;
   background: linear-gradient(rgba(55, 55, 55, 0.98), #545456);
   text-align: center;
-  padding: 0.5rem; /* 8/16 */
+  padding: 0.5rem;
 
   img {
     width: 100%;
