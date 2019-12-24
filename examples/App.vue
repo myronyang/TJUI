@@ -4,6 +4,6 @@
   </div>
 </template>
 
-<style lang="stylus">
+<style lang="scss">
 @import './assets/style/index.scss';
 </style>

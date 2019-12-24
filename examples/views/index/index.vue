@@ -21,7 +21,7 @@
         </router-link>
       </div>
     </div>
-    <div class="copyright">© 2018-2019 MyrongYang. All Rights Reserved.</div>
+    <div class="copyright">© 2018-2019 Myrongyang. All rights reserved.</div>
     <a href="https://github.com/myronyang/TJUI" target="_blank" class="tj-icon tj-github"></a>
     <div class="video-h5"></div>
     <video

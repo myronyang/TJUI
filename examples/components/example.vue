@@ -1,6 +1,6 @@
 <template>
   <section class="example-wrap">
-    <div class="example-box">
+    <div class="example-box" :style="{backgroundImage: 'url('+wrapImage+')'}">
       <div class="example-inner">
         <iframe :src="path" frameborder="0" class="iframe"></iframe>
       </div>
@@ -10,11 +10,12 @@
 
 <script>
 import router from "@/router";
-const URL = "https://myronyang.github.io/tjui-example/#";
+const URL = "http://tjdemo.glinsunai.com/#";
 export default {
   data() {
     return {
-      path: URL
+      path: URL,
+      wrapImage: require("@/assets/image/phoneWrap.png")
     };
   },
   mounted() {
@@ -33,6 +34,3 @@ export default {
   }
 };
 </script>
-
-<style>
-</style>

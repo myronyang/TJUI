@@ -1,23 +1,24 @@
 
 ## TJUI介绍
 
-### 特性
+### 简述
 
 <div class="demo-block info-block">
   <ul class="info-items">
-    <li class="info-item">为个人开发搭建，开始为了学习。后来参考前端流行的组件库和结合实际项目中发开的组件整合成TJUI组件库，在工作中快速搭建移动端网站.</li>
-    <li class="info-item">只有个别组件单元测试过，以后会全覆盖上。</li>
-    <li class="info-item">以后会保持组件维护迭代，功能完善，希望更多人参与进来。</li>
+    <li class="info-item">主要以学习为主，以成型产品来搭建。参考市面上常用组件库，不断完善，砥砺前行。</li>
+    <li class="info-item">目前仅有个别组件单元测试过，以后会全覆盖上。</li>
+    <li class="info-item">以后会保持组件维护迭代和功能完善，希望更多人参与进来。</li>
   </ul>
 </div>
 
 
-### 简述
+### 特性
 
 <div class="demo-block info-block">
   <ul class="info-items">
     <li class="info-item">支持按需引入</li>
     <li class="info-item">支持主题定制</li>
+    <li class="info-item">自定义脚手架模板</li>
     <li class="info-item">完善的中文文档</li>
   </ul>
 </div>
@@ -49,10 +50,7 @@
     &.info-code {
       text-align: center;
       .code-img {
-        opacity: .6;
-        &:hover {
-          opacity: 1;
-        }
+        opacity: .8;
       }
       .code-txt {
         color: #888

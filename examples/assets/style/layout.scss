@@ -33,6 +33,7 @@
 
       .sidebar-links {
         margin-left: 60px;
+        padding-bottom: 45px;
 
         .sidebar-head {
           margin-bottom: 15px;
@@ -117,9 +118,8 @@
         right: 1.875rem;
         width: 22.625rem;
         height: 44.625rem;
-        background: url('https://baojunev-mall.oss-cn-shenzhen.aliyuncs.com/20190530112032-c5a64769713841fb8697d16f18a7d94b.png') no-repeat;
         background-size: 22.625rem auto;
-
+        background-repeat: no-repeat;
         .example-inner {
           position: absolute;
           top: 4rem;
