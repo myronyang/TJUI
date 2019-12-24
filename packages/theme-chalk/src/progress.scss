@@ -1,0 +1,146 @@
+@import "./common/color";
+@import "./common/mixins";
+
+@include b(progress) {
+  position: relative;
+  line-height: 1;
+
+  @include e(text) {
+    font-size: 14px;
+    display: inline-block;
+    vertical-align: middle;
+    margin-left: 10px;
+    line-height: 1;
+
+    i {
+      vertical-align: middle;
+      display: block
+    }
+  }
+
+  @include m((circle, dashboard)) {
+    display: inline-block;
+  }
+
+  @include m(without-text) {
+    @include e(text) {
+      display: none
+    }
+
+    @include e(bar) {
+      padding-right: 0;
+      margin-right: 0;
+      display: block
+    }
+  }
+
+  @include m(text-inside) {
+    @include e(bar) {
+      padding-right: 0;
+      margin-right: 0
+    }
+  }
+
+  &.is-success .tj-progress-bar__inner {
+    background-color: $color-dark-green
+  }
+
+  &.is-success .tj-progress__text {
+    color: $color-dark-green
+  }
+
+  &.is-warning .tj-progress-bar__inner {
+    background-color: $color-yellow
+  }
+
+  &.is-warning .tj-progress__text {
+    color: $color-yellow
+  }
+
+  &.is-exception .tj-progress-bar__inner {
+    background-color: $color-red
+  }
+
+  &.is-exception .tj-progress__text {
+    color: $color-red
+  }
+
+}
+
+
+.tj-progress--circle .tj-progress__text,
+.tj-progress--dashboard .tj-progress__text {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  margin: 0;
+  transform: translateY(-50%);
+}
+
+.tj-progress--circle .tj-progress__text i,
+.tj-progress--dashboard .tj-progress__text i {
+  vertical-align: middle;
+  display: inline-block
+}
+
+@include b(progress-bar) {
+  padding-right: 50px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+  margin-right: -55px;
+  box-sizing: border-box;
+
+  @include e(outer) {
+    height: 6px;
+    border-radius: 100px;
+    background-color: $color-light-grey-ss;
+    overflow: hidden;
+    position: relative;
+    vertical-align: middle
+  }
+
+  @include e(inner) {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    background-color: $color-default;
+    text-align: right;
+    border-radius: 100px;
+    line-height: 1;
+    white-space: nowrap;
+    transition: width .6s ease
+  }
+
+  @include e(inner) {
+    &:after {
+      display: inline-block;
+      content: "";
+      height: 100%;
+      vertical-align: middle
+    }
+  }
+
+  @include e(innerText) {
+    display: inline-block;
+    vertical-align: middle;
+    color: #fff;
+    font-size: 12px;
+    margin: 0 5px
+  }
+}
+
+
+
+@keyframes progress {
+  0% {
+    background-position: 0 0
+  }
+
+  to {
+    background-position: 32px 0
+  }
+}

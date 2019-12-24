@@ -1,8 +1,8 @@
-@import "./common/variable.css";
+@import "./common/color";
+@import "./common/mixins";
 
-@component-namespace tj {
-  @b header {
-    background: var(--color-white);
+@include b(header) {
+    background: $color-white;
     display: flex;
     height: 45px;
 
@@ -14,7 +14,7 @@
       width: 100%;
     }
 
-    @e left {
+    @include e(left) {
       flex: 1;
       line-height: 45px;
       text-align: left;
@@ -24,12 +24,12 @@
       }
     }
 
-    @e center {
+    @include e(center) {
       flex: 1;
       text-align: center;
     }
 
-    @e title {
+    @include e(title) {
       display: inline-block;
       max-width: 135px;
       font-size: 16px;
@@ -39,7 +39,7 @@
       overflow: hidden;
     }
 
-    @e right {
+    @include e(right) {
       flex: 1;
       padding-right: 15px;
       display: flex;
@@ -51,4 +51,3 @@
       }
     }
   }
-}

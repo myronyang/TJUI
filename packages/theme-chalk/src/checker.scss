@@ -1,0 +1,35 @@
+@import "./common/color";
+@import "./common/mixins";
+
+@include b(checker-item) {
+  font-size: 14px;
+  display: inline-block;
+  border: 1px solid $color-light-grey-s;
+
+  @include e(active) {
+    color: $color-default;
+    border-color: $color-default;
+  }
+
+  @include m(small) {
+    font-size: 12px;
+    padding: 4px 7px;
+  }
+
+  @include m(normal) {
+    padding: 8px 10px;
+  }
+
+  @include m(large) {
+    padding: 13px 20px;
+  }
+}
+
+@include b(checker) {
+  width: 100%;
+  overflow: hidden;
+
+  @include e(inner) {
+    font-size: 0;
+  }
+}

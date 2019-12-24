@@ -1,0 +1,6 @@
+@import "./common/color";
+@import "./common/mixins";
+
+@include b(price) {
+  display: inline-block;
+}

@@ -1,0 +1,63 @@
+@import "./common/color";
+@import "./common/mixins";
+
+@include b(field) {
+  @include e(inner) {
+    display: flex;
+    background: $color-white;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  @include e(icon) {
+    flex: 0 0 25px;
+    line-height: 45px;
+  }
+
+  @include e(title) {
+    flex: 0 0 70px;
+    height: 45px;
+    line-height: 45px;
+  }
+
+  @include e(must) {
+    color: $color-red;
+    margin-left: 3px;
+  }
+
+  @include e(box) {
+    position: relative;
+    flex: 1;
+  }
+
+  @include e(input) {
+    width: 100%;
+    height: 45px;
+    -webkit-text-fill-color: $color-light-grey;
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+
+  @include e(textarea) {
+    width: 100%;
+    border: none;
+    padding: 2px;
+    -webkit-text-fill-color: $color-light-grey;
+    line-height: 1.6;
+
+    &:focus {
+      outline: none;
+      border: none;
+    }
+  }
+
+  @include e(clear) {
+    position: absolute;
+    top: 16px;
+    right: 10px;
+    color: $color-light-grey-s;
+  }
+}

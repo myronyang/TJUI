@@ -1,0 +1,14 @@
+@import "./common/color";
+@import "./common/mixins";
+
+@include b(rate) {
+  display: inline-block;
+  font-size: 0;
+
+  .tj-icon {
+    display: inline-block;
+    font-size: 20px;
+    color: $color-default;
+    margin-right: 2px;
+  }
+}

@@ -1,51 +1,50 @@
-@import "./common/variable.css";
+@import "./common/color";
+@import "./common/mixins";
 
-@component-namespace tj {
-  @b recycle-list {
+@include b(recycle-list) {
     position: relative;
     height: 100%;
     overflow-x: hidden;
     overflow-y: auto;
     -webkit-overflow-scrolling: touch;
 
-    @e main {
+    @include e(main) {
       min-height: 100%;
     }
 
-    @e fake {
+    @include e(fake) {
       height: 1px;
     }
 
-    @e invisible {
+    @include e(invisible) {
       top: -1000px;
       visibility: hidden;
     }
 
-    @e item {
+    @include e(item) {
       width: 100%;
       position: absolute;
       box-sizing: border-box;
     }
 
-    @e transition {
+    @include e(transition) {
       position: absolute;
       opacity: 0;
       transition-property: opacity;
       transition-duration: 500ms;
     }
 
-    @e loading {
+    @include e(loading) {
       overflow: hidden;
     }
 
-    @e loading-content {
+    @include e(loading-content) {
       text-align: center;
     }
 
-    @e spinner {
+    @include e(spinner) {
       margin: 10px auto;
       display: flex;
       justify-content: center;
     }
   }
-}

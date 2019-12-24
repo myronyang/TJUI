@@ -1,0 +1,46 @@
+@import "./common/color";
+@import "./common/mixins";
+
+@include b(collapse) {
+  padding: 15px;
+  background: $color-white;
+  overflow: hidden;
+
+  @include e(head) {
+    display: flex;
+  }
+
+  @include e(title) {
+    flex: 1;
+    font-size: 16px;
+  }
+
+  @include e(btn) {
+    flex: 0 0 100px;
+    color: $color-light-grey;
+    text-align: right;
+
+    .tj-icon {
+      font-size: 12px;
+    }
+  }
+
+  @include e(txt) {
+    color: $color-default;
+  }
+
+  @include e(main) {
+    margin-top: 15px;
+
+    &.move-enter-active,
+    &.move-leave-active {
+      transition: all 0.2s linear;
+      transform: translate3d(0, 0, 0);
+    }
+
+    &.move-enter,
+    &.move-leave-active {
+      transform: translate3d(0, 100%, 0);
+    }
+  }
+}

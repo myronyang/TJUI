@@ -1,7 +1,0 @@
-@import "./common/variable.css";
-
-@component-namespace tj {
-  @b price {
-    display: inline-block;
-  }
-}

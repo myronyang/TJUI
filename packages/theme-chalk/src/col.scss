@@ -1,0 +1,35 @@
+@import "./common/color";
+@import "./common/mixins";
+
+@include b(col) {
+
+  /* &.is-vertical:after {
+      content: '';
+      width: 0;
+      height: 100%;
+      display: inline-block;
+      vertical-align: middle;
+    } */
+  &.is-vertical {
+    display: flex;
+    align-items: center;
+  }
+
+  &.tj-col-1,
+  &.tj-col-2,
+  &.tj-col-3,
+  &.tj-col-4,
+  &.tj-col-5,
+  &.tj-col-6,
+  &.tj-col-7,
+  &.tj-col-8 {
+    float: left;
+    box-sizing: border-box;
+  }
+
+  @for $i from 1 through 8 {
+    &.tj-col-#{$i} {
+      width: ($i / 12 * 100) * 1%;
+    }
+  }
+}

@@ -1,0 +1,138 @@
+@import "./common/color";
+@import "./common/mixins";
+
+@include b(button) {
+  border: none;
+  height: 41px;
+  padding: 0 15px;
+  font-size: 1rem;
+
+  a {
+    color: $color-white;
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    line-height: 41px;
+  }
+
+  &:focus {
+    border: none;
+    outline: none;
+  }
+
+  &:active {
+    opacity: .8;
+  }
+
+  @include m(mini)  {
+    height: 22px;
+    line-height: 22px;
+    padding: 0 8px;
+
+    .text {
+      display: block;
+      font-size: 10px;
+    }
+
+    a {
+      line-height: 22px;
+    }
+  }
+
+  @include m(small) {
+    font-size: 14px;
+    height: 31px;
+  }
+
+  @include m(middle) {
+    width: 50%;
+  }
+
+  @include m(large)  {
+    display: block;
+    width: 100%;
+  }
+
+  @include m(default)  {
+    background: $color-default;
+
+    .text {
+      display: block;
+      color: $color-white;
+    }
+
+    &.is-plain {
+      color: $color-default;
+      background: none;
+      border: 1px solid $color-default;
+
+      .text {
+        display: block;
+        color: $color-default;
+      }
+    }
+  }
+
+  @include m(success)  {
+    background: $color-green;
+
+    .text {
+      display: block;
+      color: $color-white;
+    }
+
+    &.is-plain {
+      color: $color-green;
+      background: none;
+      border: 1px solid $color-green;
+
+      .text {
+        display: block;
+        color: $color-green;
+      }
+    }
+  }
+
+  &.is-disabled {
+    opacity: .6;
+  }
+
+  @include m(primary)  {
+    color: $color-black;
+    background: $color-light-grey-s;
+
+    a {
+      color: $color-black !important;
+    }
+
+    &.is-plain {
+      background: none;
+      border: 1px solid $color-light-grey-s;
+
+      a {
+        color: $color-light-grey-s;
+      }
+    }
+  }
+
+  @include m(danger)  {
+    background: $color-red;
+
+    .text {
+      display: block;
+      color: $color-white;
+    }
+
+    &.is-plain {
+      color: $color-red;
+      background: none;
+      border: 1px solid $color-red;
+
+      .text {
+        display: block;
+        color: $color-red;
+      }
+    }
+  }
+}
+

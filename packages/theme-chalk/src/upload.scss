@@ -1,0 +1,56 @@
+@import "./common/color";
+@import "./common/mixins";
+
+@include b(upload) {
+  display: inline-block;
+  border: 1px dashed $color-light-grey-ss;
+  text-align: center;
+  border-radius: 5px;
+  overflow: hidden;
+  position: relative;
+
+  @include e(inner) {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .tj-icon {
+    font-size: 30px;
+    color: $color-light-grey-s;
+  }
+
+  @include e(file) {
+    display: none;
+  }
+
+  @include e(img) {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  @include e(cover) {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    opacity: 0.5;
+    width: 100%;
+    height: 100%;
+    color: $color-default;
+    background: $color-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9;
+
+    .tj-progress--line {
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+    }
+  }
+}

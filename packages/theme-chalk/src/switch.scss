@@ -1,0 +1,74 @@
+@import "./common/color";
+@import "./common/mixins";
+
+@include b(switch) {
+  display: flex;
+  align-items: center;
+  position: relative;
+
+  * {
+    pointer-events: none;
+  }
+
+  @include e(label) {
+    margin-left: 10px;
+    display: inline-block;
+
+    &:empty {
+      margin-left: 0;
+    }
+  }
+
+  @include e(core) {
+    display: inline-block;
+    position: relative;
+    width: 52px;
+    height: 32px;
+    border: 1px solid $color-light-grey-ss;
+    border-radius: 16px;
+    box-sizing: border-box;
+    background: $color-light-grey-ss;
+
+    &::after,
+    &::before {
+      content: " ";
+      position: absolute;
+      top: 0;
+      left: 0;
+      transition: transform .3s;
+      border-radius: 15px;
+    }
+
+    &::after {
+      width: 30px;
+      height: 30px;
+      background-color: $color-white;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, .4);
+    }
+
+    &::before {
+      width: 50px;
+      height: 30px;
+      background-color: #fdfdfd;
+    }
+  }
+
+  @include e(input) {
+    display: none;
+
+    &:checked {
+      +.tj-switch__core {
+        border-color: $color-default;
+        background-color: $color-default;
+
+        &::before {
+          transform: scale(0);
+        }
+
+        &::after {
+          transform: translateX(20px);
+        }
+      }
+    }
+  }
+}

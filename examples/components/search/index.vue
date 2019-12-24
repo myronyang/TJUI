@@ -23,7 +23,7 @@
             type="search"
             v-model="searchName"
             class="btn-serch"
-            placeholder="请输入要搜索的组件名称后按回车"
+            placeholder="请输入要搜索的组件名称"
             @keyup.enter="handleSearch"
           />
         </div>

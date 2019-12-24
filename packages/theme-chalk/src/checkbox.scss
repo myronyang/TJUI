@@ -1,0 +1,20 @@
+@import "./common/color";
+@import "./common/mixins";
+
+@include b(checkbox) {
+  display: inline-block;
+
+  &.is-disabled {
+    opacity: .7;
+  }
+
+  &.is-active,
+  &.is-active .tj-icon {
+    color: $color-default;
+  }
+
+  .tj-icon {
+    margin-right: 2px;
+    color: $color-light-grey-s;
+  }
+}

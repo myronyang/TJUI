@@ -1,13 +1,17 @@
 'use strict';
 
 var gulp = require('gulp');
-var postcss = require('gulp-postcss');
+const sass = require('gulp-sass');
+const autoprefixer = require('gulp-autoprefixer');
 var cssmin = require('gulp-cssmin');
-var salad = require('postcss-salad')(require('./salad.config.json'));
 
 gulp.task('compile', function () {
-  return gulp.src('./src/*.css')
-    .pipe(postcss([salad]))
+  return gulp.src('./src/*.scss')
+    .pipe(sass.sync())
+    .pipe(autoprefixer({
+      browsers: ['ie > 9', 'last 2 versions'],
+      cascade: false
+    }))
     .pipe(cssmin())
     .pipe(gulp.dest('./lib'));
 });

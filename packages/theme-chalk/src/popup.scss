@@ -1,17 +1,17 @@
-@import "./common/variable.css";
+@import "./common/color";
+@import "./common/mixins";
 
-@component-namespace tj {
-  @b popup {
+@include b(popup) {
     position: fixed;
     width: 100%;
-    background: var(--color-white);
+    background: $color-white;
     top: 50%;
     left: 50%;
     transform: translate3d(-50%, -50%, 0);
     backface-visibility: hidden;
     transition: 0.2s ease-out;
 
-    @m top {
+    @include m(top) {
       top: 0;
       right: auto;
       bottom: auto;
@@ -19,7 +19,7 @@
       transform: translate3d(-50%, 0, 0);
     }
 
-    @m right {
+    @include m(right) {
       top: 50%;
       right: 0;
       bottom: auto;
@@ -28,7 +28,7 @@
       height: 100%;
     }
 
-    @m bottom {
+    @include m(bottom) {
       top: auto;
       right: auto;
       bottom: 0;
@@ -37,7 +37,7 @@
       min-height: 200px;
     }
 
-    @m left {
+    @include m(left) {
       top: 50%;
       right: auto;
       bottom: auto;
@@ -47,7 +47,7 @@
       height: 100%;
     }
 
-    @m center {
+    @include m(center) {
       top: 50%;
       right: auto;
       bottom: auto;
@@ -81,4 +81,3 @@
   .popup-fade-leave-active {
     opacity: 0;
   }
-}

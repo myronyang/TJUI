@@ -1,0 +1,39 @@
+@import "./common/color";
+@import "./common/mixins";
+
+@include b(cell) {
+  @include e(inner) {
+    background: $color-white;
+    color: $color-black;
+    display: flex;
+    height: 45px;
+    line-height: 45px;
+    align-items: center;
+    padding: 0 10px;
+  }
+
+  @include e(icon) {
+    flex: 0 0 20px;
+    margin-right: 7px;
+  }
+
+  @include e(title) {
+    flex: 1;
+  }
+
+  @include e(value) {
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: 55%;
+    text-align: right;
+    color: $color-light-grey;
+  }
+
+  @include e(right) {
+    flex: 0 0 20px;
+    font-size: .75rem;
+    color: $color-light-grey;
+    text-align: right;
+  }
+}
