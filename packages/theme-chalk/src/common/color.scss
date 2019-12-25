@@ -1,44 +1,44 @@
   /* color vars */
   /* basic */
-  $color-default: #9c27b0;
-  $color-green: #07c160;
-  $color-regular-blue: #4a4c5b;
-  $color-background: #f7f7f7;
-  $color-white: #fff;
-  $color-black: #333;
+  $color-default: #9c27b0 !default !default;
+  $color-green: #07c160 !default;
+  $color-regular-blue: #4a4c5b !default;
+  $color-background: #f7f7f7 !default;
+  $color-white: #fff !default;
+  $color-black: #333 !default;
 
   /* gray */
-  $color-dark-grey: #333;
-  $color-grey: #666;
-  $color-light-grey: #999;
-  $color-light-grey-s: #ccc;
-  $color-light-grey-ss: #eee;
-  $color-light-grey-sss: #fcfcfc;
-  $color-active-grey: #e8e8e8;
-  $color-dark-grey-opacity: rgba(74, 76, 91, 0.8);
-  $color-grey-opacity: rgba(0, 0, 0, .08);
-  $color-light-grey-opacity: rgba(0, 0, 0, .04);
+  $color-dark-grey: #333 !default;
+  $color-grey: #666 !default;
+  $color-light-grey: #999 !default;
+  $color-light-grey-s: #ccc !default;
+  $color-light-grey-ss: #eee !default;
+  $color-light-grey-sss: #fcfcfc !default;
+  $color-active-grey: #e8e8e8 !default;
+  $color-dark-grey-opacity: rgba(74, 76, 91, 0.8) !default;
+  $color-grey-opacity: rgba(0, 0, 0, .08) !default;
+  $color-light-grey-opacity: rgba(0, 0, 0, .04) !default;
 
   /* green */
-  $color-dark-green: #16ce7f;
-  $color-light-orange: #5cb58f;
-  $color-green-opacity: rgba(252, 145, 83, .08);
-  $color-light-green-opacity: rgba(252, 145, 83, .04);
+  $color-dark-green: #16ce7f !default;
+  $color-light-orange: #5cb58f !default;
+  $color-green-opacity: rgba(252, 145, 83, .08) !default;
+  $color-light-green-opacity: rgba(252, 145, 83, .04) !default;
 
   /* blue */
-  $color-blue: #444654;
+  $color-blue: #444654 !default;
 
   /* yellow */
-  $color-yellow: #e6a23c;
+  $color-yellow: #e6a23c !default;
 
   /* red */
-  $color-red: #f44;
+  $color-red: #f44 !default;
 
   /* row line */
-  $color-row-line: #ebebeb;
+  $color-row-line: #ebebeb !default;
 
   /* column line */
-  $color-col-line: #f5f5f5;
+  $color-col-line: #f5f5f5 !default;
 
   /* mask */
-  $color-mask-bg: rgba(37, 38, 45, .4);
+  $color-mask-bg: rgba(37, 38, 45, .4) !default;

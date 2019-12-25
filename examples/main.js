@@ -6,7 +6,8 @@ import router from './router'
 import demoBlock from './components/demo-block.vue'
 import TJUI from '../src/index'
 
-import '../packages/theme-chalk/lib/index.css'
+// import '../packages/theme-chalk/lib/index.css'
+import './theme.scss'
 
 Vue.config.productionTip = false
 
