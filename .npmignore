@@ -5,4 +5,3 @@ examples/
 node_modules/
 test/
 /packages/theme-chalk/node_modules/
-/packages/theme-chalk/src/

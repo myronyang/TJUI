@@ -9,6 +9,7 @@ const docs = r => require.ensure([], () => r(require('@/views/docs/index.vue')),
 // 开发指南
 const introduction = r => require.ensure([], () => r(require('../views/docs/introduction.md')), 'introduction')
 const quickstart = r => require.ensure([], () => r(require('../views/docs/quickstart.md')), 'quickstart')
+const customTheme = r => require.ensure([], () => r(require('../views/docs/customTheme.md')), 'customTheme')
 
 // 基础组件
 const layout = r => require.ensure([], () => r(require('@/views/docs/layout.md')), 'layout')
@@ -63,14 +64,22 @@ export default new Router({
         {
           path: 'introduction',
           label: '开发指南',
-          name: '介绍',
+          name: 'TJUI介绍',
           component: introduction
         },
+        // 开发指南
         {
           path: 'quickstart',
           label: '开发指南',
           name: '快速上手',
           component: quickstart
+        },
+        // 自定义主题
+        {
+          path: 'customTheme',
+          label: '开发指南',
+          name: '自定义主题',
+          component: customTheme
         },
         // 基础组件
         {

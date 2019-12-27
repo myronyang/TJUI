@@ -6,7 +6,7 @@ export default {
   componentName: "TJTabs",
   props: {
     value: [String, Number],
-    more: Boolean,
+    more: Boolean
   },
 
   data() {
@@ -44,7 +44,7 @@ export default {
       const tabindex = pane.active ? 0 : -1;
       return (
         <tj-col
-          class={{"tj-tabs__item": true, active: pane.active}}
+          class={["tj-tabs__item", { active: pane.active }]}
           id={tabindex}
           data-index={tabindex}
           on-click={ev => {
@@ -58,23 +58,15 @@ export default {
 
     const header = (
       <div class="tj-tabs__header">
-        <tj-row flex class={{"tj-tabs__more": this.more }}>{tabs}</tj-row>
+        <tj-row flex class={{ "tj-tabs__more": this.more }}>
+          {tabs}
+        </tj-row>
       </div>
     );
 
-    const panels = <div class={{
-      "tj-tabs__content": true
-    }}>{this.$slots.default}</div>;
+    const panels = <div class="tj-tabs__content">{this.$slots.default}</div>;
 
-    return (
-      <div
-        class={{
-          "tj-tabs": true
-        }}
-      >
-        {[header, panels]}
-      </div>
-    );
+    return <div class="tj-tabs">{[header, panels]}</div>;
   }
 };
 </script>

@@ -62,7 +62,7 @@ export default {
   font-size: 0.875rem; /* 14/16 */
   background-color: #fff;
   border-top: none;
-  margin-top: 0.9375rem;
+  margin: 0.9375rem 0;
   border-radius: 10px;
   box-shadow: 0 8px 12px #ebedf0;
 
@@ -142,7 +142,7 @@ export default {
     color: #5758bb;
   }
 
-  .javascript {
+  .javascript, .language-scss {
     color: #333;
 
     .hljs-attr {

@@ -85,10 +85,10 @@ module.exports = {
       config.dev.assetsPublicPath
   },
   resolve: {
-    extensions: ['.js', '.vue', '.json'],
+    extensions: ['.js', '.vue', '.json', '.ts'],
     alias: {
       'vue$': 'vue/dist/vue.esm.js',
-      '@': resolve('examples'),
+      '@': resolve('examples')
     }
   },
   module: {
@@ -132,6 +132,14 @@ module.exports = {
         test: /\.md$/,
         loader: 'vue-markdown-loader',
         options: vueMarkdown
+      },
+      {
+        test: /\.tsx?$/,
+        loader: 'ts-loader', 
+        exclude: /node_modules/, 
+        options: {
+          appendTsSuffixTo: [/\.vue$/],
+        }
       }
     ]
   },

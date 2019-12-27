@@ -1,6 +1,6 @@
 {
   "name": "taojinui",
-  "version": "1.1.7",
+  "version": "1.2.1",
   "description": "This is a UI components for Vue 2.x",
   "author": "myronyang <821253835@qq.com>",
   "private": false,
@@ -74,6 +74,8 @@
     "shelljs": "^0.7.6",
     "stylus": "^0.54.5",
     "stylus-loader": "^2.1.1",
+    "ts-loader": "^6.2.1",
+    "typescript": "^3.7.4",
     "uglifyjs-webpack-plugin": "^1.1.1",
     "url-loader": "^0.5.8",
     "vue-jest": "^1.0.2",

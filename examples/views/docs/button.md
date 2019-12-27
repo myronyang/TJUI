@@ -14,7 +14,7 @@
 ```html
 <tj-button>default</tj-button>
 <tj-button type="danger" plain>danger</tj-button>
-<tj-button type="success" class="mr_5">success</tj-button>
+<tj-button type="success">success</tj-button>
 <tj-button type="primary" plain>primary</tj-button>
 ```
 :::
@@ -54,15 +54,11 @@
 
 ::: demo
 ```html
-<div>
-  <tj-button size="mini" class="mr_5">mini</tj-button>
-  <tj-button size="small" class="mr_5">small</tj-button>
-  <tj-button size="normal" class="mr_5">normal</tj-button>
-</div>
-<div class="mt_10 mb_10 text_c">
-  <tj-button size="middle" class="mr_5">middle</tj-button>
-</div>
-<tj-button size="large" class="mr_5">large</tj-button>
+<tj-button size="mini">mini</tj-button>
+<tj-button size="small">small</tj-button>
+<tj-button size="normal">normal</tj-button>
+<tj-button size="middle">middle</tj-button>
+<tj-button size="large">large</tj-button>
 ```
 :::
 
@@ -78,6 +74,19 @@
 <tj-button disabled>default</tj-button>
 <tj-button type="danger" disabled>danger</tj-button>
 <tj-button type="success" disabled round="5px" plain>success</tj-button>
+```
+:::
+
+### 页面导航
+<div class="demo-block">
+  <tj-button class="mr_10" url="https://github.com/myronyang/TJUI">URL 跳转</tj-button>
+  <tj-button class="mr_10" type="danger" to="/">路由跳转</tj-button>
+<div>
+
+::: demo
+```html
+<tj-button url="https://github.com/myronyang/TJUI">URL 跳转</tj-button>
+<tj-button type="danger" to="/">路由跳转</tj-button>
 ```
 :::
 

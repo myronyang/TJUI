@@ -58,7 +58,7 @@ export default {
 
     return (
       <div
-        class={"tj-row"}
+        class="tj-row"
         style={this.gutter? {} : this.style}
         on-click={() => {
           if (this.to) {
