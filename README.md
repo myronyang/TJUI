@@ -1,5 +1,8 @@
 ## TJUI
 
+官方地址 [http://tjui.glinsunai.com/#/](http://tjui.glinsunai.com/#/)
+中文文档 [http://tjui.glinsunai.com/#/docs/introduction](http://tjui.glinsunai.com/#/docs/introduction)
+
 ### 安装
 
 使用vue-cli初始创建项目。
